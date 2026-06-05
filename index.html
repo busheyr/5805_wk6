@@ -5,23 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Governance Structures</title>
 <style>
-*, *::before, *::after { box-sizing: border-box; }
-html { font-size: 62.5%; min-height:100%; max-width:100vw; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-body { margin:0; min-height:100vh; min-height:100dvh; background:#ffffff; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size:1.8rem; line-height:1.8; color:#111; overflow-x:hidden; position:relative; }
-.background-dots { position:fixed; top:0; right:0; width:60%; opacity:0.15; pointer-events:none; z-index:0; }
+*, *::before, *::after { box-sizing:border-box; }
+html { font-size:62.5%; min-height:100%; max-width:100vw; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+body { margin:0; min-height:100vh; min-height:100dvh; background:#fff; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-size:1.8rem; line-height:1.8; color:#111; overflow-x:hidden; position:relative; }
+.background-dots { position:fixed; top:0; right:0; width:60%; opacity:.15; pointer-events:none; z-index:0; }
 .rise-shell { min-height:100vh; min-height:100dvh; display:flex; flex-direction:column; position:relative; z-index:1; }
 .rise-shell__header { padding:1.8rem 3rem; background:#fff; border-bottom:1px solid #ececec; display:flex; align-items:center; justify-content:space-between; gap:2rem; }
 .rise-shell__title { font-size:2.2rem; font-weight:700; line-height:1.2; }
 .rise-shell__meta { font-size:1.5rem; color:#555; white-space:nowrap; }
 .rise-shell__body { flex:1; min-height:0; overflow-y:auto; padding:5rem 0 7rem; }
 .rise-page { width:100%; max-width:104rem; margin:0 auto; padding:0 3.2rem; }
-:root { --space-sm:2.2rem; --space-lg:5rem; --space-xl:7rem; --blue:#007CFF; --green:#0b6b3a; --line:#dde4ee; }
+:root { --space-xs:1.4rem; --space-sm:2.2rem; --space-lg:5rem; --space-xl:7rem; --blue:#007CFF; --green:#0b6b3a; --muted:#60656f; --line:#dde4ee; }
 .rise-block { margin-block:var(--space-xl); padding:var(--space-lg); background:#fff; border-radius:.8rem; }
 .rise-block.alt { background:#f7f9fb; box-shadow:0 .4rem 1.6rem rgba(0,0,0,.04); }
 .rise-block.tint { background:#f4f9ff; box-shadow:0 .4rem 1.6rem rgba(0,0,0,.04); }
 .rise-block h1 { font-size:4rem; line-height:1.12; margin:0 0 var(--space-sm); }
 .rise-block h2 { font-size:2.8rem; margin:0 0 var(--space-sm); line-height:1.25; }
+.rise-block h3 { font-size:2rem; margin:0 0 1rem; line-height:1.35; color:#0d3155; }
+.rise-block h4 { font-size:1.8rem; margin:0 0 .6rem; line-height:1.35; }
 .rise-block p { margin:0 0 var(--space-sm); }
+.rise-block ul { margin:0 0 var(--space-sm); padding-left:2.4rem; }
+.rise-block li { margin:.7rem 0; }
 .cover-screen { position:fixed; inset:0; background:#fff; z-index:5000; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:2rem; transition:opacity .35s ease, visibility .35s ease; }
 .cover-screen.hidden { opacity:0; visibility:hidden; }
 .cover-title { font-size:3.6rem; line-height:1.15; font-weight:750; margin-bottom:3rem; max-width:78rem; }
@@ -29,22 +33,66 @@ body { margin:0; min-height:100vh; min-height:100dvh; background:#ffffff; font-f
 .cover-btn:hover { background:#0066d1; }
 .hero { border-top:.8rem solid var(--blue); background:linear-gradient(180deg,#fff,#f7fbff); }
 .callout { border-left:.6rem solid var(--blue); padding:1.8rem 2.2rem; background:#f4f9ff; border-radius:.4rem; margin:var(--space-sm) 0; font-weight:650; }
+.callout2 { text-align:center; font-size:2.3rem; line-height:1.6; color:#1a1a1a; max-width:78rem; margin:3.6rem auto; padding:2rem 1rem; position:relative; }
+.callout2::before { content:""; width:6rem; height:.3rem; background:var(--green); border-radius:1rem; display:block; margin:0 auto 2rem; }
+.split { display:grid; grid-template-columns:minmax(0,1fr) minmax(28rem,.8fr); gap:3rem; align-items:start; }
 .panel { border:1px solid var(--line); border-radius:.8rem; padding:2.2rem; background:#fff; }
 .panel.green { border-left:.5rem solid var(--green); }
-.rise-tabs { display:flex; flex-wrap:wrap; gap:1rem; margin-top:1.6rem; }
-.tab-btn { padding:.9rem 1.5rem; border-radius:.7rem; border:1px solid #cbd7e5; background:#fff; cursor:pointer; font-size:1.6rem; font-weight:650; }
-.tab-btn.active { background:#eaf4ff; border-color:#7dbaff; color:#07315b; }
-.tab-content { display:none; margin-top:1.8rem; }
-.tab-content.active { display:block; }
+.panel.blue { border-left:.5rem solid var(--blue); }
+.grid-2, .grid-3, .grid-4 { display:grid; gap:1.8rem; margin-top:2rem; }
+.grid-2 { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.grid-3 { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.grid-4 { grid-template-columns:repeat(4,minmax(0,1fr)); }
+.mini-card { border:1px solid var(--line); border-radius:.8rem; padding:2rem; background:#fff; min-height:100%; }
+.mini-card h3, .mini-card h4 { color:#0d3155; }
+.label { display:inline-block; color:var(--green); font-size:1.35rem; font-weight:800; letter-spacing:0; text-transform:uppercase; margin-bottom:.5rem; }
+.circle-list { padding-left:0 !important; list-style:none; margin-top:2rem; display:grid; gap:1.2rem; }
+.circle-list li { display:flex; align-items:flex-start; margin:0; }
+.circle-num { width:3.2rem; height:3.2rem; border-radius:50%; background:var(--blue); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; margin-right:1rem; flex:0 0 auto; }
 .reveal-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(23rem,1fr)); gap:1.6rem; margin-top:2rem; }
 .reveal-card { border:1px solid var(--line); border-radius:.8rem; background:#fff; overflow:hidden; }
 .reveal-btn { width:100%; border:0; background:#eef6ff; color:#10243a; padding:1.6rem; font-size:1.8rem; font-weight:700; text-align:left; cursor:pointer; }
 .reveal-content { display:none; padding:1.8rem; }
 .reveal-card.open .reveal-content { display:block; }
+.accordion { border:1px solid #d9e1ea; border-radius:.8rem; overflow:hidden; background:#fff; }
+.accordion-item + .accordion-item { border-top:1px solid #d9e1ea; }
+.accordion-header { background:#f7f9fb; padding:1.6rem 1.8rem; cursor:pointer; font-size:1.8rem; font-weight:700; }
+.accordion-content { display:none; padding:1.8rem; background:#fff; }
+.accordion-item.open .accordion-content { display:block; }
+.rise-tabs { display:flex; flex-wrap:wrap; gap:1rem; margin-top:1.6rem; }
+.tab-btn { padding:.9rem 1.5rem; border-radius:.7rem; border:1px solid #cbd7e5; background:#fff; cursor:pointer; font-size:1.6rem; font-weight:650; }
+.tab-btn.active { background:#eaf4ff; border-color:#7dbaff; color:#07315b; }
+.tab-content { display:none; margin-top:1.8rem; }
+.tab-content.active { display:block; }
+.card-sequence { position:relative; margin:3rem auto; width:100%; max-width:84rem; }
+.card-sequence::before { content:""; position:absolute; left:2rem; top:0; width:2px; height:100%; background:#d9e1ea; z-index:0; }
+.sequence-card { position:relative; background:#fff; border-radius:.8rem; padding:2.2rem 2.6rem; margin:2.4rem 0 2.4rem 4rem; box-shadow:0 4px 18px rgba(0,0,0,.07); border-left:.4rem solid var(--green); z-index:2; }
+.sequence-date { color:var(--green); font-weight:800; font-size:1.6rem; margin-bottom:.6rem; }
+.choice-block { display:grid; grid-template-columns:28rem 1fr; gap:2rem; align-items:start; }
+.choice-menu { display:grid; gap:1rem; }
+.choice-btn { border:1px solid #cbd7e5; background:#fff; text-align:left; padding:1.4rem 1.6rem; border-radius:.7rem; font-size:1.65rem; font-weight:700; cursor:pointer; }
+.choice-btn.active { border-color:var(--blue); background:#eaf4ff; }
+.choice-panel { display:none; }
+.choice-panel.active { display:block; }
+.comparison { display:grid; grid-template-columns:1fr 1fr; gap:1.8rem; margin-top:2rem; }
+.comparison .panel:first-child { border-top:.5rem solid #7a8a9a; }
+.comparison .panel:last-child { border-top:.5rem solid var(--green); }
+.matrix { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.4rem; margin-top:2rem; }
+.matrix-cell { border:1px solid var(--line); border-radius:.8rem; padding:2rem; background:#fff; }
+.matrix-cell strong { display:block; color:#0d3155; margin-bottom:.6rem; }
+.matrix-cell.highlight { background:#f4f9ff; border-color:#9ccaff; }
+.reflection-list { display:grid; gap:1rem; margin-top:1.8rem; }
+.reflection-item { border:1px solid var(--line); background:#fff; border-radius:.8rem; padding:1.5rem 1.7rem; display:flex; gap:1rem; align-items:flex-start; cursor:pointer; }
+.reflection-item input { margin-top:.75rem; flex:0 0 auto; }
+.reflection-item span { display:block; }
+.continue-wrap { width:100%; margin:3rem 0; }
+.continue-btn { width:100%; border:0; border-radius:.8rem; background:#006649; color:#fff; min-height:6.4rem; font-size:1.9rem; font-weight:800; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:0 .4rem 1.6rem rgba(0,102,73,.18); transition:background .2s ease, transform .2s ease; }
+.continue-btn:hover { background:#00563e; transform:translateY(-1px); }
 .section-divider { text-align:center; background:#fff; border-top:.6rem solid var(--green); box-shadow:0 .4rem 1.6rem rgba(0,0,0,.04); }
 .section-divider h2 { margin-bottom:0; }
 @media (max-width:850px) {
   .rise-shell__header { align-items:flex-start; flex-direction:column; }
+  .split, .grid-2, .grid-3, .grid-4, .choice-block, .comparison, .matrix { grid-template-columns:1fr; }
   .rise-block { padding:3rem 2rem; margin-block:4rem; }
   .rise-page { padding:0 1.8rem; }
 }
@@ -68,59 +116,311 @@ body { margin:0; min-height:100vh; min-height:100dvh; background:#ffffff; font-f
 <div class="rise-shell">
 <header class="rise-shell__header">
   <div class="rise-shell__title">Governance Structures</div>
-  <div class="rise-shell__meta">Governance Structures</div>
+  <div class="rise-shell__meta">Student-Facing Leadership Module</div>
 </header>
 <main class="rise-shell__body">
 <div class="rise-page">
 
 <section class="rise-block hero">
   <h1>Governance Structures</h1>
-  <div class="rise-tabs">
-    <button class="tab-btn active" type="button" data-group="governance" data-target="governance-boards">Boards</button>
-    <button class="tab-btn" type="button" data-group="governance" data-target="governance-authority">Authority</button>
-  </div>
-  <div class="tab-content active" data-group="governance" id="governance-boards">
-    <div class="panel"><p>Boards, leadership teams, and accountability</p></div>
-  </div>
-  <div class="tab-content" data-group="governance" id="governance-authority">
-    <div class="panel green"><p>Decision-making authority</p></div>
-  </div>
-</section>
-
-<section class="rise-block alt">
-  <h2>Public Policy and Leadership</h2>
-  <div class="reveal-grid">
-    <div class="reveal-card">
-      <button class="reveal-btn" type="button">External constraints</button>
-      <div class="reveal-content"><p>External constraints on organizations</p></div>
+  <p>Governance structures are the formal and informal arrangements through which authority is assigned, decisions are made, accountability is enforced, and organizational purpose is protected. Governance is not the same as management. Management directs day-to-day operations, while governance establishes the conditions under which management has legitimacy, direction, limits, and oversight.</p>
+  <div class="callout">The central purpose of governance is to make power accountable to mission, law, ethics, stakeholders, and long-term organizational stewardship.</div>
+  <div class="grid-3">
+    <div class="mini-card">
+      <span class="label">Authority</span>
+      <p>Governance clarifies who has the right to decide, approve, delegate, intervene, or withhold permission when organizational choices carry risk.</p>
     </div>
-    <div class="reveal-card">
-      <button class="reveal-btn" type="button">Policy-driven decision-making</button>
-      <div class="reveal-content"><p>Policy-driven decision-making</p></div>
+    <div class="mini-card">
+      <span class="label">Accountability</span>
+      <p>Governance establishes how leaders must explain decisions, report outcomes, respond to failure, and remain answerable to stakeholders.</p>
+    </div>
+    <div class="mini-card">
+      <span class="label">Stewardship</span>
+      <p>Governance protects the organization’s mission, resources, reputation, legal standing, and ethical commitments over time.</p>
     </div>
   </div>
 </section>
 
 <section class="rise-block tint">
-  <h2>Executive Accountability</h2>
+  <h2>The Core Idea</h2>
+  <div class="split">
+    <div>
+      <p>A governance structure answers a deceptively simple question: how should consequential decisions be made? The answer matters because organizations concentrate resources, affect stakeholders, and create risks that exceed any one manager’s private judgment. Without governance, authority may become arbitrary, accountability may become diffuse, and strategic choices may drift away from mission.</p>
+      <p>Scholarly approaches to governance draw from organizational theory, public administration, corporate governance, nonprofit management, health administration, and ethics. Across these fields, governance is concerned with the relationship between power and responsibility. Good governance does not eliminate conflict or uncertainty; it creates disciplined processes for handling them.</p>
+    </div>
+    <div class="panel green">
+      <h3>Governance Should Clarify</h3>
+      <ul>
+        <li><strong>Decision rights:</strong> The structure should identify which actors can make which kinds of decisions and under what conditions.</li>
+        <li><strong>Oversight obligations:</strong> Governing bodies must monitor performance, risk, compliance, finance, ethics, and mission alignment without micromanaging operations.</li>
+        <li><strong>Stakeholder responsibilities:</strong> Governance should specify whose interests must be considered and how affected groups can be heard or represented.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="rise-block alt">
+  <h2>Governance Is Not One Thing</h2>
+  <p>Different governance models emphasize different relationships among owners, boards, executives, professionals, regulators, communities, and service users. Use the tabs below to compare common lenses.</p>
+  <div class="rise-tabs">
+    <button class="tab-btn active" type="button" data-group="governance-lenses" data-target="lens-corporate">Corporate</button>
+    <button class="tab-btn" type="button" data-group="governance-lenses" data-target="lens-public">Public</button>
+    <button class="tab-btn" type="button" data-group="governance-lenses" data-target="lens-nonprofit">Nonprofit</button>
+    <button class="tab-btn" type="button" data-group="governance-lenses" data-target="lens-clinical">Professional</button>
+  </div>
+  <div class="tab-content active" data-group="governance-lenses" id="lens-corporate">
+    <div class="panel">
+      <h3>Corporate Governance</h3>
+      <p>Corporate governance focuses on the relationship among owners, boards, executives, and markets. It asks how organizations protect shareholder interests, manage risk, disclose information, and prevent executives from using delegated authority irresponsibly.</p>
+    </div>
+  </div>
+  <div class="tab-content" data-group="governance-lenses" id="lens-public">
+    <div class="panel">
+      <h3>Public Governance</h3>
+      <p>Public governance emphasizes legality, democratic accountability, transparency, due process, and stewardship of public resources. It is shaped by statutes, regulations, elected officials, administrative procedures, and public trust.</p>
+    </div>
+  </div>
+  <div class="tab-content" data-group="governance-lenses" id="lens-nonprofit">
+    <div class="panel">
+      <h3>Nonprofit Governance</h3>
+      <p>Nonprofit governance centers mission fidelity, fiduciary responsibility, donor trust, community legitimacy, and service impact. Boards must protect purpose even when funding incentives or institutional growth create pressure to drift.</p>
+    </div>
+  </div>
+  <div class="tab-content" data-group="governance-lenses" id="lens-clinical">
+    <div class="panel green">
+      <h3>Professional and Clinical Governance</h3>
+      <p>Professional governance gives expert communities a role in setting standards, protecting quality, reviewing practice, and preserving ethical obligations. In healthcare and education, governance often must balance administrative authority with professional judgment.</p>
+    </div>
+  </div>
+</section>
+
+<section class="rise-block">
+  <h2>Core Components of Governance Structures</h2>
+  <p>Governance structures are composed of bodies, roles, policies, routines, and norms. The accordion below separates the components, but effective governance depends on how well they fit together.</p>
+  <div class="accordion">
+    <div class="accordion-item open">
+      <div class="accordion-header">Governing Bodies</div>
+      <div class="accordion-content">
+        <p>Boards, councils, trustees, commissions, faculty senates, advisory groups, and committees provide forums for oversight and collective decision-making. Their legitimacy depends on role clarity, competence, independence, representation, and access to reliable information.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header">Executive Authority</div>
+      <div class="accordion-content">
+        <p>Executives translate governance direction into strategy and operations. Governance must define the scope of executive discretion: what leaders may decide independently, what requires consultation, and what requires formal approval.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header">Policies and Rules</div>
+      <div class="accordion-content">
+        <p>Policies encode expectations about finance, quality, risk, ethics, compliance, personnel, procurement, privacy, and stakeholder engagement. They reduce arbitrary decision-making but can become rigid if not reviewed against changing conditions.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header">Accountability Mechanisms</div>
+      <div class="accordion-content">
+        <p>Audits, dashboards, evaluations, public reports, accreditation reviews, ethics processes, and grievance systems allow stakeholders to assess whether authority is being used responsibly. Accountability requires both data and interpretive judgment.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header">Informal Norms</div>
+      <div class="accordion-content">
+        <p>Informal governance includes habits of consultation, unwritten rules about dissent, trust among leaders, and expectations about transparency. Formal charts may show who has authority, but informal norms often determine how power is actually exercised.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rise-block tint">
+  <h2>How Governance Works in Practice</h2>
+  <p>A governance structure becomes visible when an organization faces a consequential choice. The sequence below shows the logic of responsible governance.</p>
+  <div class="card-sequence">
+    <div class="sequence-card">
+      <div class="sequence-date">1. Define the Decision</div>
+      <p>Leaders determine what kind of decision is being made: strategic, operational, legal, ethical, financial, clinical, academic, or public. Classification matters because different decisions require different forms of review.</p>
+    </div>
+    <div class="sequence-card">
+      <div class="sequence-date">2. Identify Decision Rights</div>
+      <p>The organization clarifies who recommends, who decides, who must be consulted, who must be informed, and who can challenge or appeal the decision. This prevents both paralysis and unilateral overreach.</p>
+    </div>
+    <div class="sequence-card">
+      <div class="sequence-date">3. Gather Evidence and Voice</div>
+      <p>Good governance requires information about risk, cost, mission impact, stakeholder consequences, legal obligations, and equity implications. Evidence should be paired with meaningful participation from affected groups.</p>
+    </div>
+    <div class="sequence-card">
+      <div class="sequence-date">4. Deliberate and Decide</div>
+      <p>The governing body or authorized leader weighs competing values and makes a decision through a legitimate process. Documentation matters because future accountability depends on knowing why a decision was made.</p>
+    </div>
+    <div class="sequence-card">
+      <div class="sequence-date">5. Monitor and Learn</div>
+      <p>Governance continues after the decision. Leaders must track outcomes, harms, compliance, unintended consequences, and whether adjustments are needed.</p>
+    </div>
+  </div>
+</section>
+
+<section class="rise-block alt">
+  <h2>A Concrete Situation</h2>
+  <p>Consider a nonprofit hospital deciding whether to close an underused rural clinic because of financial losses. The decision has operational, ethical, community, regulatory, and reputational implications. It cannot be treated as a routine budget adjustment.</p>
+  <div class="choice-block">
+    <div class="choice-menu">
+      <button class="choice-btn active" type="button" data-choice-group="case" data-choice-target="case-stakes">Governance Stakes</button>
+      <button class="choice-btn" type="button" data-choice-group="case" data-choice-target="case-process">Responsible Process</button>
+      <button class="choice-btn" type="button" data-choice-group="case" data-choice-target="case-judgment">Professional Judgment</button>
+    </div>
+    <div>
+      <div class="choice-panel active panel" id="case-stakes" data-choice-group="case">
+        <h3>Governance Stakes</h3>
+        <p>The closure may protect organizational solvency but reduce access to care for a vulnerable population. It may also conflict with mission statements, community benefit obligations, and public expectations of nonprofit stewardship.</p>
+      </div>
+      <div class="choice-panel panel" id="case-process" data-choice-group="case">
+        <h3>Responsible Process</h3>
+        <p>A responsible governance process would require financial analysis, community consultation, clinical access assessment, equity review, regulatory compliance, alternatives analysis, and board-level deliberation. The decision should be documented and communicated transparently.</p>
+      </div>
+      <div class="choice-panel panel" id="case-judgment" data-choice-group="case">
+        <h3>Professional Judgment</h3>
+        <p>The central question is not simply whether the clinic loses money. The governance question is whether the organization has made a legitimate, mission-conscious, evidence-informed, and accountable decision about competing obligations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rise-block">
+  <h2>Governance Tensions and Tradeoffs</h2>
+  <p>Governance structures are designed to manage tension, not erase it. Leaders often must balance values that are all legitimate but not always compatible.</p>
+  <div class="comparison">
+    <div class="panel">
+      <h3>Control and Compliance</h3>
+      <p>Control-oriented governance emphasizes rules, monitoring, approval thresholds, audit trails, and risk avoidance. It is especially important when legal exposure, public safety, finance, or trust are at stake.</p>
+      <p>The risk is that excessive control can slow decisions, discourage initiative, and convert governance into procedural box-checking.</p>
+    </div>
+    <div class="panel">
+      <h3>Stewardship and Learning</h3>
+      <p>Stewardship-oriented governance emphasizes mission, judgment, transparency, learning, and responsible delegation. It treats leaders as agents who need both authority and accountability.</p>
+      <p>The risk is that trust-based governance can become too informal if roles, evidence, and consequences are not clearly defined.</p>
+    </div>
+  </div>
+</section>
+
+<section class="rise-block tint">
+  <h2>Public Policy and External Constraints</h2>
+  <p>No organization governs itself in isolation. External rules, public expectations, professional standards, and market conditions shape what leaders can do and how they must justify decisions.</p>
   <div class="reveal-grid">
     <div class="reveal-card">
-      <button class="reveal-btn" type="button">Responsibility and oversight</button>
-      <div class="reveal-content"><p>Responsibility and oversight</p></div>
+      <button class="reveal-btn" type="button">Law and regulation</button>
+      <div class="reveal-content">
+        <p>Legal and regulatory requirements establish boundaries for finance, privacy, safety, labor, discrimination, procurement, reporting, and professional practice. Governance must ensure that compliance is built into decision processes rather than treated as an afterthought.</p>
+      </div>
     </div>
     <div class="reveal-card">
-      <button class="reveal-btn" type="button">Ethical decision-making</button>
-      <div class="reveal-content"><p>Ethical decision-making</p></div>
+      <button class="reveal-btn" type="button">Accreditation and standards</button>
+      <div class="reveal-content">
+        <p>Accrediting bodies and professional standards influence quality expectations and institutional legitimacy. They often require evidence that organizations are monitoring outcomes, managing risk, and improving practice.</p>
+      </div>
+    </div>
+    <div class="reveal-card">
+      <button class="reveal-btn" type="button">Stakeholder pressure</button>
+      <div class="reveal-content">
+        <p>Communities, employees, clients, donors, investors, unions, media, and advocacy groups can all shape governance choices. Responsible leaders distinguish between pressure that should inform judgment and pressure that would distort mission or ethics.</p>
+      </div>
+    </div>
+    <div class="reveal-card">
+      <button class="reveal-btn" type="button">Resource dependence</button>
+      <div class="reveal-content">
+        <p>Organizations often depend on funders, contracts, reimbursements, or political support. Governance must manage the tradeoff between securing resources and preserving institutional integrity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rise-block alt">
+  <h2>Decision Matrix: Diagnosing a Governance Problem</h2>
+  <p>When governance fails, the problem is not always corruption or incompetence. The matrix below helps students distinguish common failure modes.</p>
+  <div class="matrix">
+    <div class="matrix-cell">
+      <strong>Ambiguous Authority</strong>
+      <p>People are unsure who can decide, who must be consulted, or who can override a decision. The response is clearer decision rights and escalation pathways.</p>
+    </div>
+    <div class="matrix-cell highlight">
+      <strong>Weak Accountability</strong>
+      <p>Leaders have authority but face little meaningful review of outcomes, ethics, risk, or stakeholder impact. The response is stronger oversight, reporting, and consequence systems.</p>
+    </div>
+    <div class="matrix-cell highlight">
+      <strong>Information Failure</strong>
+      <p>Decision-makers lack accurate, timely, or relevant information. The response is better data, stakeholder voice, independent review, and transparency about uncertainty.</p>
+    </div>
+    <div class="matrix-cell">
+      <strong>Mission Drift</strong>
+      <p>The organization’s choices gradually favor revenue, convenience, politics, or prestige over stated purpose. The response is renewed mission review and board-level stewardship.</p>
+    </div>
+  </div>
+</section>
+
+<section class="rise-block">
+  <h2>Assumptions, Limitations, and Cautions</h2>
+  <p>Governance language often sounds technical, but governance choices carry moral and political consequences. The following cautions help students evaluate structures more critically.</p>
+  <div class="accordion">
+    <div class="accordion-item open">
+      <div class="accordion-header">Formal structure does not guarantee accountability</div>
+      <div class="accordion-content">
+        <p>An organization may have committees, policies, and reporting templates while still avoiding difficult questions. Accountability depends on independence, courage, transparency, and willingness to act on evidence.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header">Representation is not the same as voice</div>
+      <div class="accordion-content">
+        <p>Having stakeholders present in a governance body does not ensure that their perspectives shape decisions. Participation must include access to information, psychological safety, agenda influence, and respect for dissent.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header">Efficiency can conflict with legitimacy</div>
+      <div class="accordion-content">
+        <p>Fast decision-making may be valuable in crisis, but legitimacy often requires consultation, transparency, and deliberation. Governance must determine when speed is justified and when it becomes a way to avoid scrutiny.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header">Oversight can become micromanagement</div>
+      <div class="accordion-content">
+        <p>Governing bodies should set direction, monitor performance, and hold executives accountable. They weaken governance when they routinely substitute their own operational preferences for management expertise.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="rise-block section-divider">
-  <h2>Leadership in Constrained Environments</h2>
+  <h2>From Structure to Judgment</h2>
 </section>
 
-<section class="rise-block">
-  <div class="callout">Balancing mission, regulation, and risk</div>
+<section class="rise-block tint">
+  <h2>Reflection Checkpoint</h2>
+  <p>Use these prompts to evaluate whether a governance structure supports responsible leadership rather than merely preserving formal authority.</p>
+  <div class="reflection-list">
+    <label class="reflection-item">
+      <input type="checkbox" />
+      <span><strong>Authority:</strong> Are decision rights clear enough that people know who can decide, consult, approve, and appeal?</span>
+    </label>
+    <label class="reflection-item">
+      <input type="checkbox" />
+      <span><strong>Accountability:</strong> Are leaders required to explain decisions and monitor consequences after decisions are made?</span>
+    </label>
+    <label class="reflection-item">
+      <input type="checkbox" />
+      <span><strong>Legitimacy:</strong> Are affected stakeholders meaningfully heard, especially when decisions impose burdens or risks?</span>
+    </label>
+    <label class="reflection-item">
+      <input type="checkbox" />
+      <span><strong>Mission:</strong> Does the structure protect long-term purpose when short-term incentives pull the organization elsewhere?</span>
+    </label>
+  </div>
+  <div class="continue-wrap">
+    <button class="continue-btn" type="button" data-reveal-target="concluding-insight">Continue to Concluding Insight</button>
+  </div>
+</section>
+
+<section class="rise-block alt" id="concluding-insight" hidden>
+  <h2>Concluding Insight</h2>
+  <p class="callout2">Governance is the architecture that turns authority into accountable, mission-guided judgment.</p>
+  <p>For practice, governance structures should help leaders make decisions that are not only efficient, but legitimate, ethical, legally sound, and responsive to stakeholders. They should make it harder for power to hide and easier for responsible judgment to be exercised.</p>
+  <p>For your education, the key habit is diagnostic: when an organization struggles, ask whether the issue is poor management, unclear authority, weak oversight, missing stakeholder voice, policy constraint, mission drift, or an unresolved tradeoff among legitimate values. That question will make your analysis more precise and your leadership more responsible.</p>
 </section>
 
 </div>
@@ -130,6 +430,12 @@ body { margin:0; min-height:100vh; min-height:100dvh; background:#ffffff; font-f
 <script>
 document.getElementById('coverBegin').addEventListener('click', () => {
   document.getElementById('cover').classList.add('hidden');
+});
+
+document.querySelectorAll('.accordion-header').forEach(header => {
+  header.addEventListener('click', () => {
+    header.parentElement.classList.toggle('open');
+  });
 });
 
 document.querySelectorAll('.reveal-btn').forEach(button => {
@@ -152,6 +458,29 @@ function changeTab(event) {
 
 document.querySelectorAll('.tab-btn').forEach(btn => {
   btn.addEventListener('click', changeTab);
+});
+
+document.querySelectorAll('.choice-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const group = button.dataset.choiceGroup;
+    const targetId = button.dataset.choiceTarget;
+    const block = button.closest('.choice-block');
+    block.querySelectorAll('.choice-btn[data-choice-group="' + group + '"]').forEach(item => item.classList.remove('active'));
+    block.querySelectorAll('.choice-panel[data-choice-group="' + group + '"]').forEach(item => item.classList.remove('active'));
+    button.classList.add('active');
+    const target = block.querySelector('#' + targetId);
+    if (target) target.classList.add('active');
+  });
+});
+
+document.querySelectorAll('.continue-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const target = document.getElementById(button.dataset.revealTarget);
+    if (!target) return;
+    target.hidden = false;
+    button.closest('.continue-wrap').hidden = true;
+    target.scrollIntoView({ behavior:'smooth', block:'start' });
+  });
 });
 </script>
 </body>
