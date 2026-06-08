@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Cultural Intelligence</title>
+<title>Governance, Policy, and Executive Leadership</title>
 <style>
 *, *::before, *::after { box-sizing:border-box; }
 html { font-size:62.5%; min-height:100%; max-width:100vw; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
@@ -35,7 +35,6 @@ body { margin:0; min-height:100vh; min-height:100dvh; background:#fff; font-fami
 .split { display:grid; grid-template-columns:minmax(0,1fr) minmax(28rem,.8fr); gap:3rem; align-items:start; }
 .panel { border:1px solid var(--line); border-radius:.8rem; padding:2.2rem; background:#fff; }
 .panel.green { border-left:.5rem solid var(--green); }
-.grid-2 { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.8rem; margin-top:2rem; }
 .reveal-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(23rem,1fr)); gap:1.6rem; margin-top:2rem; }
 .reveal-card { border:1px solid var(--line); border-radius:.8rem; background:#fff; overflow:hidden; }
 .reveal-btn { width:100%; border:0; background:#eef6ff; color:#10243a; padding:1.6rem; font-size:1.8rem; font-weight:700; text-align:left; cursor:pointer; }
@@ -61,14 +60,11 @@ body { margin:0; min-height:100vh; min-height:100dvh; background:#fff; font-fami
 .choice-btn.active { border-color:var(--blue); background:#eaf4ff; }
 .choice-panel { display:none; }
 .choice-panel.active { display:block; }
-.comparison { display:grid; grid-template-columns:1fr 1fr; gap:1.8rem; margin-top:2rem; }
-.comparison .panel:first-child { border-top:.5rem solid #7a8a9a; }
-.comparison .panel:last-child { border-top:.5rem solid var(--green); }
 .prompt-card { background:#10243a; color:#fff; border-radius:.8rem; padding:2.4rem; margin-top:2.6rem; font-weight:700; }
 .prompt-card p { margin-bottom:0; }
 @media (max-width:850px) {
   .rise-shell__header { align-items:flex-start; flex-direction:column; }
-  .split, .grid-2, .choice-block, .comparison { grid-template-columns:1fr; }
+  .split, .choice-block { grid-template-columns:1fr; }
   .rise-block { padding:3rem 2rem; margin-block:4rem; }
   .rise-page { padding:0 1.8rem; }
 }
@@ -85,127 +81,116 @@ body { margin:0; min-height:100vh; min-height:100dvh; background:#fff; font-fami
 </svg>
 
 <div class="cover-screen" id="cover">
-  <div class="cover-title">Cultural Intelligence</div>
-  <button class="cover-btn" id="coverBegin">Welcome to Week 5</button>
+  <div class="cover-title">Governance, Policy, and Executive Leadership</div>
+  <button class="cover-btn" id="coverBegin">Welcome to Week 6</button>
 </div>
 
 <div class="rise-shell">
 <header class="rise-shell__header">
-  <div class="rise-shell__title">Cultural Intelligence</div>
-  <div class="rise-shell__meta">Welcome to Week 5</div>
+  <div class="rise-shell__title">Governance, Policy, and Executive Leadership</div>
+  <div class="rise-shell__meta">Welcome to Week 6</div>
 </header>
 <main class="rise-shell__body">
 <div class="rise-page">
 
 <section class="rise-block hero">
-  <h1>Cultural Intelligence</h1>
-  <h2>Welcome to Week 5</h2>
-  <p>Welcome to Week 5. Thus far in the course, we have largely treated the organization as a closed system. We have looked at how founders shape culture, how leaders build psychological safety, and how talent is developed from within.</p>
-  <p>But no organization exists in a vacuum. Every organization operates within a broader societal context — what Schein calls a "macro culture." And the people who make up your organization bring those macro-cultural assumptions with them when they walk through the door.</p>
-  <p>This week, we are looking at cross-cultural leadership. Often, when we hear "cross-cultural," we think of global business: an American manager leading a team in Tokyo, or a German firm acquiring a company in Brazil. And while those are certainly cross-cultural challenges, the reality is that almost all modern leadership is cross-cultural.</p>
-  <p>Leading a team composed of Baby Boomers and Gen Z is a cross-cultural challenge. Merging the engineering department with the sales department is a cross-cultural challenge. Leading a diverse workforce in a major metropolitan hospital is a cross-cultural challenge.</p>
-  <div class="callout">By the end of this week, you will be able to identify the invisible cultural dimensions that create friction in your organization, and you will have the tools to lead effectively across those boundaries.</div>
+  <h1>Governance, Policy, and Executive Leadership</h1>
+  <h2>Welcome to Week 6</h2>
+  <p>Welcome to Week 6. Up to this point, we have largely focused on the internal dynamics of the organization: the systems, the culture, the talent, and the cross-cultural relationships within the walls of the institution.</p>
+  <p class="callout2">This week, we look outward and upward.</p>
+  <p>Executive leadership is defined by the management of boundaries. Leaders must manage the boundary between the organization and its governing board. They must manage the boundary between the organization's goals and the regulatory environment. And they must manage the boundary between the organization's past success and its future viability.</p>
+  <div class="callout">When we talk about governance and policy, we are really talking about accountability and constraints. How does a leader make decisions when they are not the ultimate authority? How does an organization adapt when external rules change? And what happens when the pressure to perform collides with a culture of fear?</div>
 </section>
 
 <section class="rise-block tint">
-  <h2>Section 1: The Invisible Baggage of Macro Culture</h2>
-  <p>In Chapter 6, Schein introduces the concept of the "macro-cultural context." A macro culture is the broad set of assumptions shared by a nation, an ethnic group, a religion, or an occupation.</p>
-  <p class="callout2">When you hire someone, you do not just hire their skills. You hire their assumptions about the world.</p>
-  <p>Schein identifies several fundamental dimensions where macro cultures differ, and where organizational friction most frequently occurs:</p>
-  <div class="accordion">
-    <div class="accordion-item open">
-      <div class="accordion-header">Assumptions about Truth and Reality</div>
-      <div class="accordion-content">
-        <p>Assumptions about Truth and Reality How do we know what is true? In some cultures (and occupations, like engineering), truth is determined by data, testing, and objective measurement. In other cultures, truth is determined by wisdom, experience, or the authority of the elder. When a data-driven manager tries to lead a relationship-driven team, the conflict is not just about the decision — it is about the fundamental assumption of what constitutes a valid reason for the decision.</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <div class="accordion-header">Assumptions about Time</div>
-      <div class="accordion-content">
-        <p>Assumptions about Time Time is not a universal concept. Schein describes "monochronic" cultures, which view time as linear, measurable, and fixed. In these cultures, being late is a sign of disrespect, and schedules rule the day. In "polychronic" cultures, time is fluid, cyclical, and subordinate to relationships. If a meeting runs long because an important conversation is happening, that is considered appropriate. You can imagine the friction when a monochronic leader manages a polychronic team.</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <div class="accordion-header">Assumptions about Space</div>
-      <div class="accordion-content">
-        <p>Assumptions about Space How close is too close? Who gets the corner office? Does the leader sit with the team or behind closed doors? Assumptions about physical space communicate deep beliefs about status, privacy, and intimacy.</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <div class="accordion-header">Assumptions about Human Nature and Relationships</div>
-      <div class="accordion-content">
-        <p>Assumptions about Human Nature and Relationships Are people fundamentally good or fundamentally flawed? Is the group more important than the individual (collectivism), or is the individual more important than the group (individualism)? Does power naturally belong to a hierarchy (high power distance), or should power be distributed equally (low power distance)?</p>
-      </div>
+  <h2>Section 1: The Lifecycle of Governance — Schein, Chapter 11</h2>
+  <p>Organizations are not static entities; they are living systems that move through predictable stages of growth, maturity, and decline. In Chapter 11, Schein explains that the role of leadership — and the nature of governance — must fundamentally change at each stage.</p>
+  <div class="rise-tabs">
+    <button class="tab-btn active" type="button" data-group="lifecycle" data-target="growth-stage">The Growth Stage</button>
+    <button class="tab-btn" type="button" data-group="lifecycle" data-target="maturity-stage">The Maturity Stage</button>
+    <button class="tab-btn" type="button" data-group="lifecycle" data-target="decline-stage">The Decline (or Transformation) Stage</button>
+  </div>
+  <div class="tab-content active" data-group="lifecycle" id="growth-stage">
+    <div class="panel"><p>The Growth Stage In young, growing organizations, governance is often informal. The founder or the founding team holds the vision, makes the decisions, and drives the culture. The primary focus is on survival and establishing a foothold in the market or community. The culture is usually strong, cohesive, and deeply tied to the founder's personality.</p></div>
+  </div>
+  <div class="tab-content" data-group="lifecycle" id="maturity-stage">
+    <div class="panel">
+      <p>The Maturity Stage As the organization succeeds and grows, informal governance is no longer sufficient. The organization becomes too complex for one person to manage. This is when formal governance structures emerge: boards of directors, executive committees, compliance departments, and strict policy manuals.</p>
+      <p>At this stage, the culture shifts from being an engine of growth to a mechanism for stability. The organization becomes highly integrated internally, but it often loses its ability to adapt externally. The very governance structures that were put in place to protect the organization can become the bureaucracy that suffocates it.</p>
     </div>
   </div>
-  <div class="prompt-card">
-    <p>As a leader, you do not need to memorize every cultural variation. What you do need is the awareness that your own assumptions are not universal. When an employee behaves in a way that seems irrational or counterproductive to you, the systems-thinking leader asks: What cultural assumption makes this behavior perfectly rational to them?</p>
+  <div class="tab-content" data-group="lifecycle" id="decline-stage">
+    <div class="panel green">
+      <p>The Decline (or Transformation) Stage Eventually, the external environment changes — a new public policy is enacted, a disruptive technology emerges, or a global crisis occurs. The mature organization, weighed down by its own success and rigid governance, struggles to respond.</p>
+      <p>This is the critical test of executive leadership. The leader must recognize that the culture and governance structures that brought the organization to maturity are now the exact things causing its decline.</p>
+    </div>
   </div>
 </section>
 
 <section class="rise-block alt">
-  <h2>Section 2: Cultural Intelligence (CQ)</h2>
-  <p>If macro cultures are the landscape, Cultural Intelligence (CQ) is how a leader navigates it.</p>
-  <p>In Chapter 7, Schein discusses the necessity of developing CQ. Emotional intelligence (EQ) is the ability to read and manage the emotions of yourself and others. Cultural intelligence is the ability to recognize when a behavior is driven not by individual personality, but by cultural programming — and the ability to adapt your leadership style accordingly.</p>
-  <p>CQ requires three things:</p>
-  <div class="rise-tabs">
-    <button class="tab-btn active" type="button" data-group="cq" data-target="cq-cognitive">Cognitive Awareness</button>
-    <button class="tab-btn" type="button" data-group="cq" data-target="cq-motivational">Motivational Drive</button>
-    <button class="tab-btn" type="button" data-group="cq" data-target="cq-behavioral">Behavioral Flexibility</button>
+  <h2>Section 2: Guided Cultural Evolution — Schein, Chapter 12</h2>
+  <p>When an organization faces decline due to external shifts, how does a leader respond? In Chapter 12, Schein discusses "guided cultural evolution."</p>
+  <div class="split">
+    <div>
+      <p>Leaders cannot simply decree a new culture or a new governance model. Instead, they must guide the evolution of the organization by leveraging the parts of the culture that are still functional, while systematically dismantling the parts that are not.</p>
+      <p>This often involves managing the board of directors as much as managing the employees. Boards are typically composed of individuals who represent the mature, stable version of the organization. They are designed to minimize risk. But in a period of necessary transformation, minimizing risk is the most dangerous thing an organization can do.</p>
+    </div>
+    <div class="panel green">
+      <p>The executive leader must act as a translator: translating the realities of the changing external environment (public policy, market shifts) to the board, and translating the board's governance requirements to the organization, all while guiding the system toward necessary change.</p>
+    </div>
   </div>
-  <div class="tab-content active" data-group="cq" id="cq-cognitive">
-    <div class="panel"><p>Cognitive awareness: Knowing that cultural differences exist and understanding the basic dimensions (like time, space, and hierarchy).</p></div>
-  </div>
-  <div class="tab-content" data-group="cq" id="cq-motivational">
-    <div class="panel"><p>Motivational drive: The genuine desire to learn about other cultures and the humility to suspend judgment when encountering something unfamiliar.</p></div>
-  </div>
-  <div class="tab-content" data-group="cq" id="cq-behavioral">
-    <div class="panel green"><p>Behavioral flexibility: The ability to change your communication style, your meeting structure, or your decision-making process to accommodate the cultural needs of your team.</p></div>
-  </div>
-  <p class="callout">A leader with low CQ expects the team to adapt to the leader's culture. A leader with high CQ adapts the organizational environment to maximize the effectiveness of a diverse team.</p>
 </section>
 
 <section class="rise-block">
-  <h2>Section 3: The Paradox of Macro Culture</h2>
-  <p>One of the most profound insights Schein offers in Chapter 7 is what he calls the "paradox of macro culture."</p>
-  <p class="callout2">The paradox is this: As the world becomes more globalized and interconnected, we might expect cultures to blend together into a single, uniform global culture. But the opposite is happening. As organizations become more diverse, people often cling more tightly to their macro-cultural identities.</p>
-  <div class="choice-block">
-    <div class="choice-menu">
-      <button class="choice-btn active" type="button" data-choice-group="paradox" data-choice-target="paradox-implications">Implications</button>
-      <button class="choice-btn" type="button" data-choice-group="paradox" data-choice-target="paradox-colorblind">Colorblind</button>
-      <button class="choice-btn" type="button" data-choice-group="paradox" data-choice-target="paradox-inclusion">True Inclusion</button>
+  <h2>Section 3: The Danger of Rigid Governance — Edmondson, Chapter 3</h2>
+  <p>What happens when an organization faces intense external pressure, but its internal governance and culture do not allow for adaptation?</p>
+  <p class="callout2">In Chapter 3 of The Fearless Organization, Edmondson provides the answer: Avoidable Failure.</p>
+  <p>Edmondson examines catastrophic failures across multiple industries — from the Volkswagen emissions scandal to the Wells Fargo account fraud. In almost every case, the failure was not the result of a few bad actors. It was the result of a toxic combination of rigid executive governance, intense external pressure, and a complete lack of psychological safety.</p>
+  <p>Consider the dynamic:</p>
+  <div class="card-sequence">
+    <div class="sequence-card">
+      <div class="sequence-date">The External Pressure</div>
+      <p>The External Pressure: A shift in public policy, a new regulatory requirement, or an aggressive market target is established.</p>
     </div>
-    <div>
-      <div class="choice-panel active panel" id="paradox-implications" data-choice-group="paradox">
-        <p>This has significant implications for diversity and inclusion efforts. Many organizations attempt to create a "colorblind" or "culture-blind" environment, assuming that if everyone is treated exactly the same, the organization will be fair and effective.</p>
-      </div>
-      <div class="choice-panel panel" id="paradox-colorblind" data-choice-group="paradox">
-        <p>But Schein argues that this approach ignores reality. Treating everyone the same often means forcing everyone to assimilate into the dominant culture of the leadership team.</p>
-      </div>
-      <div class="choice-panel panel green" id="paradox-inclusion" data-choice-group="paradox">
-        <p>True inclusion requires acknowledging differences, understanding how those differences impact work, and designing systems that leverage those differences as strengths.</p>
-      </div>
+    <div class="sequence-card">
+      <div class="sequence-date">The Governance Response</div>
+      <p>The Governance Response: Executive leadership and the board mandate compliance or demand that the target be met, often tying compensation and job security to the outcome.</p>
     </div>
+    <div class="sequence-card">
+      <div class="sequence-date">The Internal Reality</div>
+      <p>The Internal Reality: The people on the ground realize that the target is impossible to meet legally or ethically given the current constraints.</p>
+    </div>
+    <div class="sequence-card">
+      <div class="sequence-date">The Silence</div>
+      <p>The Silence: Because there is no psychological safety, no one tells the executives that the goal is impossible. Instead, they cut corners, hide data, or falsify records to appear compliant.</p>
+    </div>
+  </div>
+  <p>This is a failure of executive accountability. The executives in these cases often claim they "did not know" what was happening on the front lines. But as Edmondson points out, it is the executive's job to design a system where they will know.</p>
+  <div class="prompt-card">
+    <p>If your governance structure demands perfection but punishes honesty, you are designing a system for avoidable failure.</p>
   </div>
 </section>
 
 <section class="rise-block tint">
-  <h2>Section 4: Fostering Cross-Cultural Learning</h2>
-  <p>How does a leader actually bridge these divides? Schein suggests that the most effective tool is dialogue.</p>
-  <p class="callout2">Not debate. Not discussion. Dialogue.</p>
-  <p>In a debate, the goal is to win. In a discussion, the goal is to make a decision. In dialogue, the goal is to understand the assumptions of the other person.</p>
-  <p>When a cross-cultural conflict arises — whether it is between two international offices, or between the clinical staff and the administrative staff in a hospital — the leader must pause the decision-making process and initiate dialogue.</p>
-  <div class="reveal-grid">
-    <div class="reveal-card">
-      <button class="reveal-btn" type="button">Humble Inquiry</button>
-      <div class="reveal-content">
-        <p>Schein recommends a stance of "humble inquiry." The leader must approach the situation not as an expert who knows the right way to work, but as a curious learner trying to understand how the other group views the world. “Help me understand how your team views this deadline.” “Can you explain how decisions are typically made in your department?”</p>
+  <h2>Section 4: Leadership in Constrained Environments</h2>
+  <p>How, then, does a leader operate effectively at the intersection of governance, policy, and culture?</p>
+  <div class="accordion">
+    <div class="accordion-item open">
+      <div class="accordion-header">Treat Policy as a Parameter, Not a Strategy</div>
+      <div class="accordion-content">
+        <p>Treat Policy as a Parameter, Not a Strategy Public policy and regulatory requirements set the boundaries of what is permissible. They are the parameters of the game. But compliance is not a strategy. A leader must ensure the organization meets its regulatory obligations while still driving toward its strategic mission. If the mission and the regulation are in conflict, the leader must engage in guided evolution (Schein) to adapt the organization.</p>
       </div>
     </div>
-    <div class="reveal-card">
-      <button class="reveal-btn" type="button">Shared Micro-Culture</button>
-      <div class="reveal-content">
-        <p>By making the invisible assumptions visible, the leader creates a new, shared micro-culture — a set of rules that both sides agree upon for how they will work together moving forward.</p>
+    <div class="accordion-item">
+      <div class="accordion-header">Build "Tell Me the Bad News" Governance</div>
+      <div class="accordion-content">
+        <p>Build "Tell Me the Bad News" Governance Boards and executive teams naturally prefer good news. A systems-thinking leader actively builds governance structures that require the surfacing of bad news. This means changing the metrics of success to include leading indicators of risk, and rewarding employees who identify compliance issues before they become crises (Edmondson).</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header">Accept the Burden of Accountability</div>
+      <div class="accordion-content">
+        <p>Accept the Burden of Accountability In complex systems, accountability cannot be entirely delegated. The executive leader is ultimately responsible not just for the decisions they make, but for the culture of decision-making they have allowed to exist beneath them. If the system produces a failure, the executive owns the system.</p>
       </div>
     </div>
   </div>
@@ -213,10 +198,10 @@ body { margin:0; min-height:100vh; min-height:100dvh; background:#fff; font-fami
 
 <section class="rise-block alt">
   <h2>Closing Thoughts</h2>
-  <p>Cross-cultural leadership is not about memorizing a list of "dos and don'ts" for different countries or generations. It is a mindset.</p>
-  <p>It is the recognition that your way of working is just one way of working. It is the humility to ask questions when you encounter friction, rather than assuming the other party is wrong. And it is the strategic ability to weave diverse perspectives into a stronger, more resilient organizational system.</p>
+  <p>Governance and policy are often viewed as the dry, bureaucratic side of leadership. But in reality, they are the crucible in which executive character is tested.</p>
+  <p>It is easy to lead when the market is growing, the board is happy, and the regulations are loose. True executive leadership is demonstrated when the policy environment turns hostile, the board is anxious, and the organization must transform or face decline.</p>
   <div class="prompt-card">
-    <p>As you approach this week's assignment, look closely at your organization. Where is the friction? Is it possible that what looks like a performance problem or a personality conflict is actually a clash of macro cultures?</p>
+    <p>As you approach this week's discussion board, consider the external constraints your organization faces. How does your leadership team balance the demands of governance with the necessity of adaptation? And most importantly, does your organization's culture allow the truth about those constraints to be spoken aloud?</p>
   </div>
 </section>
 
@@ -255,19 +240,6 @@ function changeTab(event) {
 
 document.querySelectorAll('.tab-btn').forEach(btn => {
   btn.addEventListener('click', changeTab);
-});
-
-document.querySelectorAll('.choice-btn').forEach(button => {
-  button.addEventListener('click', () => {
-    const group = button.dataset.choiceGroup;
-    const targetId = button.dataset.choiceTarget;
-    const block = button.closest('.choice-block');
-    block.querySelectorAll('.choice-btn[data-choice-group="' + group + '"]').forEach(item => item.classList.remove('active'));
-    block.querySelectorAll('.choice-panel[data-choice-group="' + group + '"]').forEach(item => item.classList.remove('active'));
-    button.classList.add('active');
-    const target = block.querySelector('#' + targetId);
-    if (target) target.classList.add('active');
-  });
 });
 </script>
 </body>
