@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Governance Structures</title>
+<title>Cultural Intelligence</title>
 <style>
 *, *::before, *::after { box-sizing:border-box; }
 html { font-size:62.5%; min-height:100%; max-width:100vw; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
@@ -15,17 +15,14 @@ body { margin:0; min-height:100vh; min-height:100dvh; background:#fff; font-fami
 .rise-shell__meta { font-size:1.5rem; color:#555; white-space:nowrap; }
 .rise-shell__body { flex:1; min-height:0; overflow-y:auto; padding:5rem 0 7rem; }
 .rise-page { width:100%; max-width:104rem; margin:0 auto; padding:0 3.2rem; }
-:root { --space-xs:1.4rem; --space-sm:2.2rem; --space-lg:5rem; --space-xl:7rem; --blue:#007CFF; --green:#0b6b3a; --muted:#60656f; --line:#dde4ee; }
+:root { --space-sm:2.2rem; --space-lg:5rem; --space-xl:7rem; --blue:#007CFF; --green:#0b6b3a; --line:#dde4ee; }
 .rise-block { margin-block:var(--space-xl); padding:var(--space-lg); background:#fff; border-radius:.8rem; }
 .rise-block.alt { background:#f7f9fb; box-shadow:0 .4rem 1.6rem rgba(0,0,0,.04); }
 .rise-block.tint { background:#f4f9ff; box-shadow:0 .4rem 1.6rem rgba(0,0,0,.04); }
 .rise-block h1 { font-size:4rem; line-height:1.12; margin:0 0 var(--space-sm); }
 .rise-block h2 { font-size:2.8rem; margin:0 0 var(--space-sm); line-height:1.25; }
 .rise-block h3 { font-size:2rem; margin:0 0 1rem; line-height:1.35; color:#0d3155; }
-.rise-block h4 { font-size:1.8rem; margin:0 0 .6rem; line-height:1.35; }
 .rise-block p { margin:0 0 var(--space-sm); }
-.rise-block ul { margin:0 0 var(--space-sm); padding-left:2.4rem; }
-.rise-block li { margin:.7rem 0; }
 .cover-screen { position:fixed; inset:0; background:#fff; z-index:5000; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:2rem; transition:opacity .35s ease, visibility .35s ease; }
 .cover-screen.hidden { opacity:0; visibility:hidden; }
 .cover-title { font-size:3.6rem; line-height:1.15; font-weight:750; margin-bottom:3rem; max-width:78rem; }
@@ -38,23 +35,13 @@ body { margin:0; min-height:100vh; min-height:100dvh; background:#fff; font-fami
 .split { display:grid; grid-template-columns:minmax(0,1fr) minmax(28rem,.8fr); gap:3rem; align-items:start; }
 .panel { border:1px solid var(--line); border-radius:.8rem; padding:2.2rem; background:#fff; }
 .panel.green { border-left:.5rem solid var(--green); }
-.panel.blue { border-left:.5rem solid var(--blue); }
-.grid-2, .grid-3, .grid-4 { display:grid; gap:1.8rem; margin-top:2rem; }
-.grid-2 { grid-template-columns:repeat(2,minmax(0,1fr)); }
-.grid-3 { grid-template-columns:repeat(3,minmax(0,1fr)); }
-.grid-4 { grid-template-columns:repeat(4,minmax(0,1fr)); }
-.mini-card { border:1px solid var(--line); border-radius:.8rem; padding:2rem; background:#fff; min-height:100%; }
-.mini-card h3, .mini-card h4 { color:#0d3155; }
-.label { display:inline-block; color:var(--green); font-size:1.35rem; font-weight:800; letter-spacing:0; text-transform:uppercase; margin-bottom:.5rem; }
-.circle-list { padding-left:0 !important; list-style:none; margin-top:2rem; display:grid; gap:1.2rem; }
-.circle-list li { display:flex; align-items:flex-start; margin:0; }
-.circle-num { width:3.2rem; height:3.2rem; border-radius:50%; background:var(--blue); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; margin-right:1rem; flex:0 0 auto; }
+.grid-2 { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.8rem; margin-top:2rem; }
 .reveal-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(23rem,1fr)); gap:1.6rem; margin-top:2rem; }
 .reveal-card { border:1px solid var(--line); border-radius:.8rem; background:#fff; overflow:hidden; }
 .reveal-btn { width:100%; border:0; background:#eef6ff; color:#10243a; padding:1.6rem; font-size:1.8rem; font-weight:700; text-align:left; cursor:pointer; }
 .reveal-content { display:none; padding:1.8rem; }
 .reveal-card.open .reveal-content { display:block; }
-.accordion { border:1px solid #d9e1ea; border-radius:.8rem; overflow:hidden; background:#fff; }
+.accordion { border:1px solid #d9e1ea; border-radius:.8rem; overflow:hidden; background:#fff; margin-top:2rem; }
 .accordion-item + .accordion-item { border-top:1px solid #d9e1ea; }
 .accordion-header { background:#f7f9fb; padding:1.6rem 1.8rem; cursor:pointer; font-size:1.8rem; font-weight:700; }
 .accordion-content { display:none; padding:1.8rem; background:#fff; }
@@ -77,22 +64,11 @@ body { margin:0; min-height:100vh; min-height:100dvh; background:#fff; font-fami
 .comparison { display:grid; grid-template-columns:1fr 1fr; gap:1.8rem; margin-top:2rem; }
 .comparison .panel:first-child { border-top:.5rem solid #7a8a9a; }
 .comparison .panel:last-child { border-top:.5rem solid var(--green); }
-.matrix { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.4rem; margin-top:2rem; }
-.matrix-cell { border:1px solid var(--line); border-radius:.8rem; padding:2rem; background:#fff; }
-.matrix-cell strong { display:block; color:#0d3155; margin-bottom:.6rem; }
-.matrix-cell.highlight { background:#f4f9ff; border-color:#9ccaff; }
-.reflection-list { display:grid; gap:1rem; margin-top:1.8rem; }
-.reflection-item { border:1px solid var(--line); background:#fff; border-radius:.8rem; padding:1.5rem 1.7rem; display:flex; gap:1rem; align-items:flex-start; cursor:pointer; }
-.reflection-item input { margin-top:.75rem; flex:0 0 auto; }
-.reflection-item span { display:block; }
-.continue-wrap { width:100%; margin:3rem 0; }
-.continue-btn { width:100%; border:0; border-radius:.8rem; background:#006649; color:#fff; min-height:6.4rem; font-size:1.9rem; font-weight:800; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:0 .4rem 1.6rem rgba(0,102,73,.18); transition:background .2s ease, transform .2s ease; }
-.continue-btn:hover { background:#00563e; transform:translateY(-1px); }
-.section-divider { text-align:center; background:#fff; border-top:.6rem solid var(--green); box-shadow:0 .4rem 1.6rem rgba(0,0,0,.04); }
-.section-divider h2 { margin-bottom:0; }
+.prompt-card { background:#10243a; color:#fff; border-radius:.8rem; padding:2.4rem; margin-top:2.6rem; font-weight:700; }
+.prompt-card p { margin-bottom:0; }
 @media (max-width:850px) {
   .rise-shell__header { align-items:flex-start; flex-direction:column; }
-  .split, .grid-2, .grid-3, .grid-4, .choice-block, .comparison, .matrix { grid-template-columns:1fr; }
+  .split, .grid-2, .choice-block, .comparison { grid-template-columns:1fr; }
   .rise-block { padding:3rem 2rem; margin-block:4rem; }
   .rise-page { padding:0 1.8rem; }
 }
@@ -109,318 +85,139 @@ body { margin:0; min-height:100vh; min-height:100dvh; background:#fff; font-fami
 </svg>
 
 <div class="cover-screen" id="cover">
-  <div class="cover-title">Governance Structures</div>
-  <button class="cover-btn" id="coverBegin">Begin</button>
+  <div class="cover-title">Cultural Intelligence</div>
+  <button class="cover-btn" id="coverBegin">Welcome to Week 5</button>
 </div>
 
 <div class="rise-shell">
 <header class="rise-shell__header">
-  <div class="rise-shell__title">Governance Structures</div>
-  <div class="rise-shell__meta">Student-Facing Leadership Module</div>
+  <div class="rise-shell__title">Cultural Intelligence</div>
+  <div class="rise-shell__meta">Welcome to Week 5</div>
 </header>
 <main class="rise-shell__body">
 <div class="rise-page">
 
 <section class="rise-block hero">
-  <h1>Governance Structures</h1>
-  <p>Governance structures are the formal and informal arrangements through which authority is assigned, decisions are made, accountability is enforced, and organizational purpose is protected. Governance is not the same as management. Management directs day-to-day operations, while governance establishes the conditions under which management has legitimacy, direction, limits, and oversight.</p>
-  <div class="callout">The central purpose of governance is to make power accountable to mission, law, ethics, stakeholders, and long-term organizational stewardship.</div>
-  <div class="grid-3">
-    <div class="mini-card">
-      <span class="label">Authority</span>
-      <p>Governance clarifies who has the right to decide, approve, delegate, intervene, or withhold permission when organizational choices carry risk.</p>
-    </div>
-    <div class="mini-card">
-      <span class="label">Accountability</span>
-      <p>Governance establishes how leaders must explain decisions, report outcomes, respond to failure, and remain answerable to stakeholders.</p>
-    </div>
-    <div class="mini-card">
-      <span class="label">Stewardship</span>
-      <p>Governance protects the organization’s mission, resources, reputation, legal standing, and ethical commitments over time.</p>
-    </div>
-  </div>
+  <h1>Cultural Intelligence</h1>
+  <h2>Welcome to Week 5</h2>
+  <p>Welcome to Week 5. Thus far in the course, we have largely treated the organization as a closed system. We have looked at how founders shape culture, how leaders build psychological safety, and how talent is developed from within.</p>
+  <p>But no organization exists in a vacuum. Every organization operates within a broader societal context — what Schein calls a "macro culture." And the people who make up your organization bring those macro-cultural assumptions with them when they walk through the door.</p>
+  <p>This week, we are looking at cross-cultural leadership. Often, when we hear "cross-cultural," we think of global business: an American manager leading a team in Tokyo, or a German firm acquiring a company in Brazil. And while those are certainly cross-cultural challenges, the reality is that almost all modern leadership is cross-cultural.</p>
+  <p>Leading a team composed of Baby Boomers and Gen Z is a cross-cultural challenge. Merging the engineering department with the sales department is a cross-cultural challenge. Leading a diverse workforce in a major metropolitan hospital is a cross-cultural challenge.</p>
+  <div class="callout">By the end of this week, you will be able to identify the invisible cultural dimensions that create friction in your organization, and you will have the tools to lead effectively across those boundaries.</div>
 </section>
 
 <section class="rise-block tint">
-  <h2>The Core Idea</h2>
-  <div class="split">
-    <div>
-      <p>A governance structure answers a deceptively simple question: how should consequential decisions be made? The answer matters because organizations concentrate resources, affect stakeholders, and create risks that exceed any one manager’s private judgment. Without governance, authority may become arbitrary, accountability may become diffuse, and strategic choices may drift away from mission.</p>
-      <p>Scholarly approaches to governance draw from organizational theory, public administration, corporate governance, nonprofit management, health administration, and ethics. Across these fields, governance is concerned with the relationship between power and responsibility. Good governance does not eliminate conflict or uncertainty; it creates disciplined processes for handling them.</p>
+  <h2>Section 1: The Invisible Baggage of Macro Culture</h2>
+  <p>In Chapter 6, Schein introduces the concept of the "macro-cultural context." A macro culture is the broad set of assumptions shared by a nation, an ethnic group, a religion, or an occupation.</p>
+  <p class="callout2">When you hire someone, you do not just hire their skills. You hire their assumptions about the world.</p>
+  <p>Schein identifies several fundamental dimensions where macro cultures differ, and where organizational friction most frequently occurs:</p>
+  <div class="accordion">
+    <div class="accordion-item open">
+      <div class="accordion-header">Assumptions about Truth and Reality</div>
+      <div class="accordion-content">
+        <p>Assumptions about Truth and Reality How do we know what is true? In some cultures (and occupations, like engineering), truth is determined by data, testing, and objective measurement. In other cultures, truth is determined by wisdom, experience, or the authority of the elder. When a data-driven manager tries to lead a relationship-driven team, the conflict is not just about the decision — it is about the fundamental assumption of what constitutes a valid reason for the decision.</p>
+      </div>
     </div>
-    <div class="panel green">
-      <h3>Governance Should Clarify</h3>
-      <ul>
-        <li><strong>Decision rights:</strong> The structure should identify which actors can make which kinds of decisions and under what conditions.</li>
-        <li><strong>Oversight obligations:</strong> Governing bodies must monitor performance, risk, compliance, finance, ethics, and mission alignment without micromanaging operations.</li>
-        <li><strong>Stakeholder responsibilities:</strong> Governance should specify whose interests must be considered and how affected groups can be heard or represented.</li>
-      </ul>
+    <div class="accordion-item">
+      <div class="accordion-header">Assumptions about Time</div>
+      <div class="accordion-content">
+        <p>Assumptions about Time Time is not a universal concept. Schein describes "monochronic" cultures, which view time as linear, measurable, and fixed. In these cultures, being late is a sign of disrespect, and schedules rule the day. In "polychronic" cultures, time is fluid, cyclical, and subordinate to relationships. If a meeting runs long because an important conversation is happening, that is considered appropriate. You can imagine the friction when a monochronic leader manages a polychronic team.</p>
+      </div>
     </div>
+    <div class="accordion-item">
+      <div class="accordion-header">Assumptions about Space</div>
+      <div class="accordion-content">
+        <p>Assumptions about Space How close is too close? Who gets the corner office? Does the leader sit with the team or behind closed doors? Assumptions about physical space communicate deep beliefs about status, privacy, and intimacy.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header">Assumptions about Human Nature and Relationships</div>
+      <div class="accordion-content">
+        <p>Assumptions about Human Nature and Relationships Are people fundamentally good or fundamentally flawed? Is the group more important than the individual (collectivism), or is the individual more important than the group (individualism)? Does power naturally belong to a hierarchy (high power distance), or should power be distributed equally (low power distance)?</p>
+      </div>
+    </div>
+  </div>
+  <div class="prompt-card">
+    <p>As a leader, you do not need to memorize every cultural variation. What you do need is the awareness that your own assumptions are not universal. When an employee behaves in a way that seems irrational or counterproductive to you, the systems-thinking leader asks: What cultural assumption makes this behavior perfectly rational to them?</p>
   </div>
 </section>
 
 <section class="rise-block alt">
-  <h2>Governance Is Not One Thing</h2>
-  <p>Different governance models emphasize different relationships among owners, boards, executives, professionals, regulators, communities, and service users. Use the tabs below to compare common lenses.</p>
+  <h2>Section 2: Cultural Intelligence (CQ)</h2>
+  <p>If macro cultures are the landscape, Cultural Intelligence (CQ) is how a leader navigates it.</p>
+  <p>In Chapter 7, Schein discusses the necessity of developing CQ. Emotional intelligence (EQ) is the ability to read and manage the emotions of yourself and others. Cultural intelligence is the ability to recognize when a behavior is driven not by individual personality, but by cultural programming — and the ability to adapt your leadership style accordingly.</p>
+  <p>CQ requires three things:</p>
   <div class="rise-tabs">
-    <button class="tab-btn active" type="button" data-group="governance-lenses" data-target="lens-corporate">Corporate</button>
-    <button class="tab-btn" type="button" data-group="governance-lenses" data-target="lens-public">Public</button>
-    <button class="tab-btn" type="button" data-group="governance-lenses" data-target="lens-nonprofit">Nonprofit</button>
-    <button class="tab-btn" type="button" data-group="governance-lenses" data-target="lens-clinical">Professional</button>
+    <button class="tab-btn active" type="button" data-group="cq" data-target="cq-cognitive">Cognitive Awareness</button>
+    <button class="tab-btn" type="button" data-group="cq" data-target="cq-motivational">Motivational Drive</button>
+    <button class="tab-btn" type="button" data-group="cq" data-target="cq-behavioral">Behavioral Flexibility</button>
   </div>
-  <div class="tab-content active" data-group="governance-lenses" id="lens-corporate">
-    <div class="panel">
-      <h3>Corporate Governance</h3>
-      <p>Corporate governance focuses on the relationship among owners, boards, executives, and markets. It asks how organizations protect shareholder interests, manage risk, disclose information, and prevent executives from using delegated authority irresponsibly.</p>
-    </div>
+  <div class="tab-content active" data-group="cq" id="cq-cognitive">
+    <div class="panel"><p>Cognitive awareness: Knowing that cultural differences exist and understanding the basic dimensions (like time, space, and hierarchy).</p></div>
   </div>
-  <div class="tab-content" data-group="governance-lenses" id="lens-public">
-    <div class="panel">
-      <h3>Public Governance</h3>
-      <p>Public governance emphasizes legality, democratic accountability, transparency, due process, and stewardship of public resources. It is shaped by statutes, regulations, elected officials, administrative procedures, and public trust.</p>
-    </div>
+  <div class="tab-content" data-group="cq" id="cq-motivational">
+    <div class="panel"><p>Motivational drive: The genuine desire to learn about other cultures and the humility to suspend judgment when encountering something unfamiliar.</p></div>
   </div>
-  <div class="tab-content" data-group="governance-lenses" id="lens-nonprofit">
-    <div class="panel">
-      <h3>Nonprofit Governance</h3>
-      <p>Nonprofit governance centers mission fidelity, fiduciary responsibility, donor trust, community legitimacy, and service impact. Boards must protect purpose even when funding incentives or institutional growth create pressure to drift.</p>
-    </div>
+  <div class="tab-content" data-group="cq" id="cq-behavioral">
+    <div class="panel green"><p>Behavioral flexibility: The ability to change your communication style, your meeting structure, or your decision-making process to accommodate the cultural needs of your team.</p></div>
   </div>
-  <div class="tab-content" data-group="governance-lenses" id="lens-clinical">
-    <div class="panel green">
-      <h3>Professional and Clinical Governance</h3>
-      <p>Professional governance gives expert communities a role in setting standards, protecting quality, reviewing practice, and preserving ethical obligations. In healthcare and education, governance often must balance administrative authority with professional judgment.</p>
-    </div>
-  </div>
+  <p class="callout">A leader with low CQ expects the team to adapt to the leader's culture. A leader with high CQ adapts the organizational environment to maximize the effectiveness of a diverse team.</p>
 </section>
 
 <section class="rise-block">
-  <h2>Core Components of Governance Structures</h2>
-  <p>Governance structures are composed of bodies, roles, policies, routines, and norms. The accordion below separates the components, but effective governance depends on how well they fit together.</p>
-  <div class="accordion">
-    <div class="accordion-item open">
-      <div class="accordion-header">Governing Bodies</div>
-      <div class="accordion-content">
-        <p>Boards, councils, trustees, commissions, faculty senates, advisory groups, and committees provide forums for oversight and collective decision-making. Their legitimacy depends on role clarity, competence, independence, representation, and access to reliable information.</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <div class="accordion-header">Executive Authority</div>
-      <div class="accordion-content">
-        <p>Executives translate governance direction into strategy and operations. Governance must define the scope of executive discretion: what leaders may decide independently, what requires consultation, and what requires formal approval.</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <div class="accordion-header">Policies and Rules</div>
-      <div class="accordion-content">
-        <p>Policies encode expectations about finance, quality, risk, ethics, compliance, personnel, procurement, privacy, and stakeholder engagement. They reduce arbitrary decision-making but can become rigid if not reviewed against changing conditions.</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <div class="accordion-header">Accountability Mechanisms</div>
-      <div class="accordion-content">
-        <p>Audits, dashboards, evaluations, public reports, accreditation reviews, ethics processes, and grievance systems allow stakeholders to assess whether authority is being used responsibly. Accountability requires both data and interpretive judgment.</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <div class="accordion-header">Informal Norms</div>
-      <div class="accordion-content">
-        <p>Informal governance includes habits of consultation, unwritten rules about dissent, trust among leaders, and expectations about transparency. Formal charts may show who has authority, but informal norms often determine how power is actually exercised.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="rise-block tint">
-  <h2>How Governance Works in Practice</h2>
-  <p>A governance structure becomes visible when an organization faces a consequential choice. The sequence below shows the logic of responsible governance.</p>
-  <div class="card-sequence">
-    <div class="sequence-card">
-      <div class="sequence-date">1. Define the Decision</div>
-      <p>Leaders determine what kind of decision is being made: strategic, operational, legal, ethical, financial, clinical, academic, or public. Classification matters because different decisions require different forms of review.</p>
-    </div>
-    <div class="sequence-card">
-      <div class="sequence-date">2. Identify Decision Rights</div>
-      <p>The organization clarifies who recommends, who decides, who must be consulted, who must be informed, and who can challenge or appeal the decision. This prevents both paralysis and unilateral overreach.</p>
-    </div>
-    <div class="sequence-card">
-      <div class="sequence-date">3. Gather Evidence and Voice</div>
-      <p>Good governance requires information about risk, cost, mission impact, stakeholder consequences, legal obligations, and equity implications. Evidence should be paired with meaningful participation from affected groups.</p>
-    </div>
-    <div class="sequence-card">
-      <div class="sequence-date">4. Deliberate and Decide</div>
-      <p>The governing body or authorized leader weighs competing values and makes a decision through a legitimate process. Documentation matters because future accountability depends on knowing why a decision was made.</p>
-    </div>
-    <div class="sequence-card">
-      <div class="sequence-date">5. Monitor and Learn</div>
-      <p>Governance continues after the decision. Leaders must track outcomes, harms, compliance, unintended consequences, and whether adjustments are needed.</p>
-    </div>
-  </div>
-</section>
-
-<section class="rise-block alt">
-  <h2>A Concrete Situation</h2>
-  <p>Consider a nonprofit hospital deciding whether to close an underused rural clinic because of financial losses. The decision has operational, ethical, community, regulatory, and reputational implications. It cannot be treated as a routine budget adjustment.</p>
+  <h2>Section 3: The Paradox of Macro Culture</h2>
+  <p>One of the most profound insights Schein offers in Chapter 7 is what he calls the "paradox of macro culture."</p>
+  <p class="callout2">The paradox is this: As the world becomes more globalized and interconnected, we might expect cultures to blend together into a single, uniform global culture. But the opposite is happening. As organizations become more diverse, people often cling more tightly to their macro-cultural identities.</p>
   <div class="choice-block">
     <div class="choice-menu">
-      <button class="choice-btn active" type="button" data-choice-group="case" data-choice-target="case-stakes">Governance Stakes</button>
-      <button class="choice-btn" type="button" data-choice-group="case" data-choice-target="case-process">Responsible Process</button>
-      <button class="choice-btn" type="button" data-choice-group="case" data-choice-target="case-judgment">Professional Judgment</button>
+      <button class="choice-btn active" type="button" data-choice-group="paradox" data-choice-target="paradox-implications">Implications</button>
+      <button class="choice-btn" type="button" data-choice-group="paradox" data-choice-target="paradox-colorblind">Colorblind</button>
+      <button class="choice-btn" type="button" data-choice-group="paradox" data-choice-target="paradox-inclusion">True Inclusion</button>
     </div>
     <div>
-      <div class="choice-panel active panel" id="case-stakes" data-choice-group="case">
-        <h3>Governance Stakes</h3>
-        <p>The closure may protect organizational solvency but reduce access to care for a vulnerable population. It may also conflict with mission statements, community benefit obligations, and public expectations of nonprofit stewardship.</p>
+      <div class="choice-panel active panel" id="paradox-implications" data-choice-group="paradox">
+        <p>This has significant implications for diversity and inclusion efforts. Many organizations attempt to create a "colorblind" or "culture-blind" environment, assuming that if everyone is treated exactly the same, the organization will be fair and effective.</p>
       </div>
-      <div class="choice-panel panel" id="case-process" data-choice-group="case">
-        <h3>Responsible Process</h3>
-        <p>A responsible governance process would require financial analysis, community consultation, clinical access assessment, equity review, regulatory compliance, alternatives analysis, and board-level deliberation. The decision should be documented and communicated transparently.</p>
+      <div class="choice-panel panel" id="paradox-colorblind" data-choice-group="paradox">
+        <p>But Schein argues that this approach ignores reality. Treating everyone the same often means forcing everyone to assimilate into the dominant culture of the leadership team.</p>
       </div>
-      <div class="choice-panel panel" id="case-judgment" data-choice-group="case">
-        <h3>Professional Judgment</h3>
-        <p>The central question is not simply whether the clinic loses money. The governance question is whether the organization has made a legitimate, mission-conscious, evidence-informed, and accountable decision about competing obligations.</p>
+      <div class="choice-panel panel green" id="paradox-inclusion" data-choice-group="paradox">
+        <p>True inclusion requires acknowledging differences, understanding how those differences impact work, and designing systems that leverage those differences as strengths.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="rise-block">
-  <h2>Governance Tensions and Tradeoffs</h2>
-  <p>Governance structures are designed to manage tension, not erase it. Leaders often must balance values that are all legitimate but not always compatible.</p>
-  <div class="comparison">
-    <div class="panel">
-      <h3>Control and Compliance</h3>
-      <p>Control-oriented governance emphasizes rules, monitoring, approval thresholds, audit trails, and risk avoidance. It is especially important when legal exposure, public safety, finance, or trust are at stake.</p>
-      <p>The risk is that excessive control can slow decisions, discourage initiative, and convert governance into procedural box-checking.</p>
-    </div>
-    <div class="panel">
-      <h3>Stewardship and Learning</h3>
-      <p>Stewardship-oriented governance emphasizes mission, judgment, transparency, learning, and responsible delegation. It treats leaders as agents who need both authority and accountability.</p>
-      <p>The risk is that trust-based governance can become too informal if roles, evidence, and consequences are not clearly defined.</p>
     </div>
   </div>
 </section>
 
 <section class="rise-block tint">
-  <h2>Public Policy and External Constraints</h2>
-  <p>No organization governs itself in isolation. External rules, public expectations, professional standards, and market conditions shape what leaders can do and how they must justify decisions.</p>
+  <h2>Section 4: Fostering Cross-Cultural Learning</h2>
+  <p>How does a leader actually bridge these divides? Schein suggests that the most effective tool is dialogue.</p>
+  <p class="callout2">Not debate. Not discussion. Dialogue.</p>
+  <p>In a debate, the goal is to win. In a discussion, the goal is to make a decision. In dialogue, the goal is to understand the assumptions of the other person.</p>
+  <p>When a cross-cultural conflict arises — whether it is between two international offices, or between the clinical staff and the administrative staff in a hospital — the leader must pause the decision-making process and initiate dialogue.</p>
   <div class="reveal-grid">
     <div class="reveal-card">
-      <button class="reveal-btn" type="button">Law and regulation</button>
+      <button class="reveal-btn" type="button">Humble Inquiry</button>
       <div class="reveal-content">
-        <p>Legal and regulatory requirements establish boundaries for finance, privacy, safety, labor, discrimination, procurement, reporting, and professional practice. Governance must ensure that compliance is built into decision processes rather than treated as an afterthought.</p>
+        <p>Schein recommends a stance of "humble inquiry." The leader must approach the situation not as an expert who knows the right way to work, but as a curious learner trying to understand how the other group views the world. “Help me understand how your team views this deadline.” “Can you explain how decisions are typically made in your department?”</p>
       </div>
     </div>
     <div class="reveal-card">
-      <button class="reveal-btn" type="button">Accreditation and standards</button>
+      <button class="reveal-btn" type="button">Shared Micro-Culture</button>
       <div class="reveal-content">
-        <p>Accrediting bodies and professional standards influence quality expectations and institutional legitimacy. They often require evidence that organizations are monitoring outcomes, managing risk, and improving practice.</p>
-      </div>
-    </div>
-    <div class="reveal-card">
-      <button class="reveal-btn" type="button">Stakeholder pressure</button>
-      <div class="reveal-content">
-        <p>Communities, employees, clients, donors, investors, unions, media, and advocacy groups can all shape governance choices. Responsible leaders distinguish between pressure that should inform judgment and pressure that would distort mission or ethics.</p>
-      </div>
-    </div>
-    <div class="reveal-card">
-      <button class="reveal-btn" type="button">Resource dependence</button>
-      <div class="reveal-content">
-        <p>Organizations often depend on funders, contracts, reimbursements, or political support. Governance must manage the tradeoff between securing resources and preserving institutional integrity.</p>
+        <p>By making the invisible assumptions visible, the leader creates a new, shared micro-culture — a set of rules that both sides agree upon for how they will work together moving forward.</p>
       </div>
     </div>
   </div>
 </section>
 
 <section class="rise-block alt">
-  <h2>Decision Matrix: Diagnosing a Governance Problem</h2>
-  <p>When governance fails, the problem is not always corruption or incompetence. The matrix below helps students distinguish common failure modes.</p>
-  <div class="matrix">
-    <div class="matrix-cell">
-      <strong>Ambiguous Authority</strong>
-      <p>People are unsure who can decide, who must be consulted, or who can override a decision. The response is clearer decision rights and escalation pathways.</p>
-    </div>
-    <div class="matrix-cell highlight">
-      <strong>Weak Accountability</strong>
-      <p>Leaders have authority but face little meaningful review of outcomes, ethics, risk, or stakeholder impact. The response is stronger oversight, reporting, and consequence systems.</p>
-    </div>
-    <div class="matrix-cell highlight">
-      <strong>Information Failure</strong>
-      <p>Decision-makers lack accurate, timely, or relevant information. The response is better data, stakeholder voice, independent review, and transparency about uncertainty.</p>
-    </div>
-    <div class="matrix-cell">
-      <strong>Mission Drift</strong>
-      <p>The organization’s choices gradually favor revenue, convenience, politics, or prestige over stated purpose. The response is renewed mission review and board-level stewardship.</p>
-    </div>
+  <h2>Closing Thoughts</h2>
+  <p>Cross-cultural leadership is not about memorizing a list of "dos and don'ts" for different countries or generations. It is a mindset.</p>
+  <p>It is the recognition that your way of working is just one way of working. It is the humility to ask questions when you encounter friction, rather than assuming the other party is wrong. And it is the strategic ability to weave diverse perspectives into a stronger, more resilient organizational system.</p>
+  <div class="prompt-card">
+    <p>As you approach this week's assignment, look closely at your organization. Where is the friction? Is it possible that what looks like a performance problem or a personality conflict is actually a clash of macro cultures?</p>
   </div>
-</section>
-
-<section class="rise-block">
-  <h2>Assumptions, Limitations, and Cautions</h2>
-  <p>Governance language often sounds technical, but governance choices carry moral and political consequences. The following cautions help students evaluate structures more critically.</p>
-  <div class="accordion">
-    <div class="accordion-item open">
-      <div class="accordion-header">Formal structure does not guarantee accountability</div>
-      <div class="accordion-content">
-        <p>An organization may have committees, policies, and reporting templates while still avoiding difficult questions. Accountability depends on independence, courage, transparency, and willingness to act on evidence.</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <div class="accordion-header">Representation is not the same as voice</div>
-      <div class="accordion-content">
-        <p>Having stakeholders present in a governance body does not ensure that their perspectives shape decisions. Participation must include access to information, psychological safety, agenda influence, and respect for dissent.</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <div class="accordion-header">Efficiency can conflict with legitimacy</div>
-      <div class="accordion-content">
-        <p>Fast decision-making may be valuable in crisis, but legitimacy often requires consultation, transparency, and deliberation. Governance must determine when speed is justified and when it becomes a way to avoid scrutiny.</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <div class="accordion-header">Oversight can become micromanagement</div>
-      <div class="accordion-content">
-        <p>Governing bodies should set direction, monitor performance, and hold executives accountable. They weaken governance when they routinely substitute their own operational preferences for management expertise.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="rise-block section-divider">
-  <h2>From Structure to Judgment</h2>
-</section>
-
-<section class="rise-block tint">
-  <h2>Reflection Checkpoint</h2>
-  <p>Use these prompts to evaluate whether a governance structure supports responsible leadership rather than merely preserving formal authority.</p>
-  <div class="reflection-list">
-    <label class="reflection-item">
-      <input type="checkbox" />
-      <span><strong>Authority:</strong> Are decision rights clear enough that people know who can decide, consult, approve, and appeal?</span>
-    </label>
-    <label class="reflection-item">
-      <input type="checkbox" />
-      <span><strong>Accountability:</strong> Are leaders required to explain decisions and monitor consequences after decisions are made?</span>
-    </label>
-    <label class="reflection-item">
-      <input type="checkbox" />
-      <span><strong>Legitimacy:</strong> Are affected stakeholders meaningfully heard, especially when decisions impose burdens or risks?</span>
-    </label>
-    <label class="reflection-item">
-      <input type="checkbox" />
-      <span><strong>Mission:</strong> Does the structure protect long-term purpose when short-term incentives pull the organization elsewhere?</span>
-    </label>
-  </div>
-  <div class="continue-wrap">
-    <button class="continue-btn" type="button" data-reveal-target="concluding-insight">Continue to Concluding Insight</button>
-  </div>
-</section>
-
-<section class="rise-block alt" id="concluding-insight" hidden>
-  <h2>Concluding Insight</h2>
-  <p class="callout2">Governance is the architecture that turns authority into accountable, mission-guided judgment.</p>
-  <p>For practice, governance structures should help leaders make decisions that are not only efficient, but legitimate, ethical, legally sound, and responsive to stakeholders. They should make it harder for power to hide and easier for responsible judgment to be exercised.</p>
-  <p>For your education, the key habit is diagnostic: when an organization struggles, ask whether the issue is poor management, unclear authority, weak oversight, missing stakeholder voice, policy constraint, mission drift, or an unresolved tradeoff among legitimate values. That question will make your analysis more precise and your leadership more responsible.</p>
 </section>
 
 </div>
@@ -470,16 +267,6 @@ document.querySelectorAll('.choice-btn').forEach(button => {
     button.classList.add('active');
     const target = block.querySelector('#' + targetId);
     if (target) target.classList.add('active');
-  });
-});
-
-document.querySelectorAll('.continue-btn').forEach(button => {
-  button.addEventListener('click', () => {
-    const target = document.getElementById(button.dataset.revealTarget);
-    if (!target) return;
-    target.hidden = false;
-    button.closest('.continue-wrap').hidden = true;
-    target.scrollIntoView({ behavior:'smooth', block:'start' });
   });
 });
 </script>
